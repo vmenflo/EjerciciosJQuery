@@ -28,26 +28,24 @@
 			</div>
 		</section>
 		<script>
-			/*
+			
 			$(document).ready(function(){
-				$('.noticia img').mouseenter(function(){
-					var texto=$(this).attr('alt'); //Guardamos la descripcion
-					$(this).after('<p class="texto">'+texto+'</p>');
+				$('.noticia img').mouseenter(function(){				
+					$(this).next('h3').css("display","flex");
 				});
 
 				$('.noticia img').mouseleave(function(){
-					$(this).next('.texto').remove();
+					$(this).next('h3').css("display","none");
 				})
-			})*/
-			$(document).ready(function(){
+			})
+			/*$(document).ready(function(){
 				$('.noticia img').hover(function(){
-					var texto = $(this).attr('alt');
-					$(this).after('<p>'+texto+'</p>')
+					$(this).next('h3').css("display","flex");
 				},function(){
-					$(this).next('p').remove();
+					$(this).next('h3').css("display","none");
 				}
 				);
-			})
+			})*/
 		</script>
 	</body>
 </html>
