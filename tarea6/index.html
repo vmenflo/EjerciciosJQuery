@@ -99,8 +99,23 @@
 <script>
 			
 	$(document).ready(function(){
-		$('head').scroll().css();
-	})
+		//Función para quitar el true en el input al redimensionar la web
+		$(window).on('resize',function() {
+			$("#menu-hamburger").prop("checked", false); 
+		});
+
+		//Función para controlar el encabezado
+		$(window).on('scroll',function() {
+			if($(this).scrollTop() > 0){ // Si la posición del scroll se mueve
+            $('header').addClass('fijado'); 
+        }else{
+            $('header').removeClass('fijado'); //Lo quitamos
+        }
+		});
+	});
+
+	
+
 	
 </script>
 </body>

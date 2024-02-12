@@ -15,6 +15,13 @@ div#contenedor > header {
     flex-basis: 100%;
     justify-content: space-between;
     align-items: center;
+    background-color: white;
+}
+.fijado{
+    position:fixed;
+    width:100%;
+    background-color: white;
+    opacity: 50%;
 }
 div#contenedor > header > nav > ul {
     list-style: none;
