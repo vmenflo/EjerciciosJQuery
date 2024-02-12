@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea5</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="jquery-3.7.1.min.js" type="text/javascript"></script>
+</head>
+<body>
+    <h2>Formulario de resgristro</h2>
+    <form id="principal" action="https://educacionadistancia.juntadeandalucia.es/centros/malaga/pluginfile.php/818801/assignsubmission_file/submission_files/179823/Ejercicio5.html" method="post">
+        <div id="tratamiento"><input class="noaplicar" type="radio" name="senior"><label>Sr.</label><input class="noaplicar" type="radio" name="seniora"><label>Sra.</label></div>
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre / Razón Social" autofocus aria-label="Nombre" title="Introduce el nombre">
+        <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos*" aria-label="Apellidos" maxlength="35" title="Introduce tu apellido">
+        <input type="email" id="email" name="email" placeholder="Email*" aria-label="email" title="Introduce email">
+        <input type="password" name="contraeña" id="contraeña" placeholder="Contraseña" pattern="[A-Za-z0-9!?-]{8,12}" required title="Introduce contraseña">
+        <h3>FECHA DE NACIMIENTO</h3>
+        <input type="date" name="dia" id="dia" min="2020-09-15" max="2099-06-30" title="Introduce fecha de nacimiento">
+        <input type="text" name="dni" id="dni" placeholder="DNI/NIF/NIE*" title="Introduce dni" pattern="[0-9]{8}[A-Za-z]{1}">
+        <input type="text" name="direccion" id="direccion" placeholder="Direccion*" title="Introduce direccion">
+        <input type="text" name="cp" id="cp" placeholder="Código Postal*" title="Introduce codigo postal">
+        <input type="text" name="ciudad" id="ciudad" placeholder="Ciudad*" title="Introduce ciudad">
+        <input list="paises">
+            <datalist id="paises">
+                <option value="España">
+                <option value="francia">
+                <option value="Alemania">
+            </datalist>
+        <input list="provincia">
+            <datalist id="provincia">
+                <option selected value="Andalucia">
+                <option value="Cataluña">
+                <option value="Galicia">
+            </datalist>
+            <input type="tel" name="telefono" id="telefono" pattern="[0-9]{9}" placeholder="Telefono">
+            <div id="datos"><input class="noaplicar" type="checkbox"> <label>Estos datos personales se usaran para responder a sus busquedas, procesar sus pedidos o autorizar el acceso</label></div>
+            <input type="submit" formnovalidate="formnovalidate" id="boton" value="Registrarse">
+            <script>
+			
+                $(document).ready(function(){
+                   $('#principal input').focus(function(){
+                    $(this).css({
+                        "background-color":"grey",
+                        "font-size":"18pt",
+                    });
+                   })
+                   $('#principal input').focusout(function(){
+                    $(this).css({
+                        "background-color":"white",
+                        "font-size":"10pt",
+                    });
+                   })
+                })
+                
+            </script>
+</body>
+</html>

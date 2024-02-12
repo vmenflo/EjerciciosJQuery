@@ -1,0 +1,53 @@
+*{box-sizing:border-box}
+body{text-align: center;}
+form#principal {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form#principal input {
+    margin:0.5em;
+    border: none;
+    border-bottom: 1px solid black;
+    width:40%;
+    flex-wrap: wrap;
+}
+
+form#principal > input::placeholder{color:black}
+
+form#principal input.noaplicar {width:10PX;}
+
+form#principal input#boton {
+    background-color: black;
+    color:white;
+    padding:0.5em;
+    border-radius: 20px;
+    margin-top: 3em;
+    font-weight: bold;
+    border:none;
+    text-transform: uppercase;
+    letter-spacing:0.25em;
+    width:10rem;
+    
+}
+
+h2,h3 {
+    color:black;
+    text-transform: uppercase;
+    
+}
+h3 {font-size: 0.75rem;}
+h2 {font-size: 1rem;}
+ 
+
+form#principal div#tratamiento{
+    color:black;
+    font-weight: bold;
+}
+
+form#principal div#datos{
+    font-size:0.75rem;
+    width:40%;
+    padding:0;
+}
