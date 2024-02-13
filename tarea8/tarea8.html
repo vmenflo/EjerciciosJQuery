@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea8</title>
+    <script src="jquery-3.7.1.min.js" type="text/javascript"></script>
+    <style>
+        #mi-capa{
+            background-color: aquamarine;
+            width:50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="mi-capa"><p>HOLA</p></div>
+    <script>
+        $('#mi-capa').click(function(evento){
+        $(this).css("width", function(index,value){
+        var aumento = prompt("¿Cuánto quieres aumentar?","25");
+        return (parseInt(value) + parseInt(aumento)) + "px";
+        });
+});
+    </script>
+</body>
+</html>

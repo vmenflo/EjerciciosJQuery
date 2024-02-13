@@ -1,0 +1,127 @@
+* {box-sizing: border-box;
+margin:0;
+padding:0;}
+/*TODO EL CONTENEDOR*/
+div#contenedor {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+/*PARA MODIFICAR EL HEADER*/
+div#contenedor > header {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+.fijado{
+    position:fixed;
+    width:100%;
+    background-color: white;
+    opacity: 50%;
+}
+div#contenedor > header > nav > ul {
+    list-style: none;
+}
+div#contenedor > header > nav#menu-principal {
+    order:1;
+}
+ul#menu > li {
+    border-bottom: 1px grey solid;
+    padding:0.5rem;
+}
+ul#menu > li > a {
+    color:grey;
+    text-decoration: none;
+}
+div#contenedor > header> nav#menu-principal > ul#menu{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: white;
+    padding: 0.5rem 0;
+    
+}
+div#contenedor > header > nav#menu-principal label.menu-hamburguer {display:block;
+}
+
+div#contenedor > header > nav#menu-principal label.menu-hamburguer >span {color:grey;}
+
+
+div#contenedor > header > nav#buscador {
+    order:2;
+}
+div#contenedor > header > nav#compra {
+    order:4;
+}
+div#contenedor > header > picture {
+    order:3;
+}
+
+header > nav#menuprincipal > label > span {font-size: 1.5rem;}
+
+div#contenedor > header > picture > img {height: auto; width:10rem;}
+
+div#contenedor > header > nav#buscador > ul > li > a  {color:grey;}
+div#contenedor > header > nav#compra > ul > li > a  {color:grey;}
+
+/*PARA MODIFICAR EL MAIN*/
+div#contenedor > main {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+}
+
+div#contenedor > main > article {
+    display:flex;
+    flex-direction: column-reverse;
+    flex-basis: 50%;
+    text-align: center;
+    padding:0.25rem;
+}
+
+div#contenedor > main > article > a > picture > img {width:100%;height: auto;}
+
+
+
+div#contenedor > main > article > a {text-decoration: none; color:black;}
+
+div#contenedor > main > article > p {order:-1;}
+
+/*PARA MODIFICAR EL FOOTER*/
+div#contenedor > footer {
+    display:flex;
+    flex-direction: column;
+    flex-basis: 100%;
+}
+
+div#contenedor > footer > nav#menu-adicional {
+    display:flex;
+    flex-direction: column;
+    flex-basis: 100%;
+}
+
+div#contenedor > footer > nav#menu-adicional > ul > li {
+    border-bottom: 1px grey solid;
+
+}
+
+div#contenedor > footer > nav > ul > li {list-style: none;}
+
+div#contenedor > footer > nav#iconos-sociales > ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    padding:1rem;
+    text-align:center;
+}   
+
+div#contenedor > footer > nav#iconos-sociales > ul > li {flex-basis:20%;
+font-size: 2rem;}
+
+div#contenedor > footer > nav > ul > li> a {color:grey;text-decoration: none;}
