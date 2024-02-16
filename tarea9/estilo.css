@@ -17,6 +17,10 @@ div#contenedor > header {
     align-items: center;
     background-color: white;
 }
+#hamburguesa{
+    font-size: 2rem;
+
+}
 .fijado{
     position:fixed;
     width:100%;
