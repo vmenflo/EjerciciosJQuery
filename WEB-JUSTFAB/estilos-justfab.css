@@ -26,6 +26,12 @@ header#top{
 	justify-content: space-between;
 	text-align: center;
 }
+.fijado{
+	position:fixed;
+    width:100%;
+    
+    opacity: 50%;
+}
 header#top > div{
 	order:1;
 	flex:100%;

@@ -26,10 +26,54 @@ $('nav#menu-principal span').on('click', function(){
 todas las demás.*/
 
 $('ul#menu > li').on('click', function(){
+    
+    $('ul#menu > li').find('.fa-angle-down').css({
+        transform: 'rotate(0deg)',
+        transition: 'transform 0.3s ease'
+});
     $('ul#menu > li').not(this).children('ul').slideUp();
-
-    $(this).children('ul').slideToggle();
+ 
+    var icono = $(this).find('.fa-angle-down');
+    if ($(this).children('ul').is(':hidden')) {
+        $(this).children('ul').slideDown();
+        icono.css({
+            transform: 'rotate(180deg)',
+            transition: 'transform 0.3s ease'
+        });
+    } else {
+        $(this).children('ul').slideUp();
+        icono.css({
+            transform: 'rotate(0deg)', // Rotación original
+            transition: 'transform 0.3s ease'
+        });
+    }  
    
+});
+/*
+
+Cuando haces un poco de scroll sobre la página debe aparecer con el efecto que consideres
+ más apropiado, la cabecera de la página fijada en la parte superior.*/
+ 
+ /*
+$(window).on('scroll',function() {
+    if($(this).scrollTop() > 20){ // Si la posición del scroll se mueve
+    $('header#top').addClass('fijado');
+    }else{
+    $('header#top').removeClass('fijado');//Lo quitamos
+    }
+});*/
+
+/*Al posicionar el ratón sobre la imagen de un producto debe aparecer otra imagen del mismo producto. 
+Cuando el ratón deja de estar sobe la imagen aparece la imagen inicial.*/
+
+$('article.item img').on('mouseenter', function(){
+    var src = $(this).attr('src');
+    $(this).attr("src", src.replace('.jpg', '-1.jpg'));
+});
+
+$('article.item img').on('mouseleave', function(){
+    var src = $(this).attr('src');
+    $(this).attr("src", src.replace('-1.jpg', '.jpg'));
 });
 
 });
