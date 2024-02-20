@@ -30,7 +30,7 @@ header#top{
 	position:fixed;
     width:100%;
     
-    opacity: 50%;
+    opacity: 80%;
 }
 header#top > div{
 	order:1;

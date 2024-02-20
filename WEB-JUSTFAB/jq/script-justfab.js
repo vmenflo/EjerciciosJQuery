@@ -22,6 +22,11 @@ $('nav#menu-principal span').on('click', function(){
     $('ul#menu').slideToggle();
 });
 
+/*Funcion para cerrar el menu si hay un resize()*/
+$(window).on('resize',function() {
+    $("ul#menu").slideUp(); 
+});
+
 /*Cada opción del submenú se muestra con un efecto y al mostrar una se ocultan 
 todas las demás.*/
 
@@ -54,26 +59,37 @@ $('ul#menu > li').on('click', function(){
 Cuando haces un poco de scroll sobre la página debe aparecer con el efecto que consideres
  más apropiado, la cabecera de la página fijada en la parte superior.*/
  
- /*
+ 
 $(window).on('scroll',function() {
-    if($(this).scrollTop() > 20){ // Si la posición del scroll se mueve
-    $('header#top').addClass('fijado');
+    if($(this).scrollTop() > 10){ // Si la posición del scroll se mueve
+    $('header#top > div').addClass('fijado');
     }else{
-    $('header#top').removeClass('fijado');//Lo quitamos
+    $('header#top > div').removeClass('fijado');//Lo quitamos
     }
-});*/
+});
+
+/*Para conseguir que al pulsar el botón suba arriba*/
+$('div#volverarriba').on('click', function(){
+
+    $('body,html').animate({
+        scrollTop:'0px'
+    },300);
+})
 
 /*Al posicionar el ratón sobre la imagen de un producto debe aparecer otra imagen del mismo producto. 
 Cuando el ratón deja de estar sobe la imagen aparece la imagen inicial.*/
 
 $('article.item img').on('mouseenter', function(){
-    var src = $(this).attr('src');
-    $(this).attr("src", src.replace('.jpg', '-1.jpg'));
+    $(this).stop(true,true).delay(3000).queue(function(){
+        var src = $(this).attr('src');
+        $(this).attr("src", src.replace('.jpg', '-1.jpg')); 
+    })
 });
 
 $('article.item img').on('mouseleave', function(){
     var src = $(this).attr('src');
-    $(this).attr("src", src.replace('-1.jpg', '.jpg'));
+    $(this).stop(true,true).attr("src", src.replace('-1.jpg', '.jpg'));
 });
+
 
 });
