@@ -19,12 +19,12 @@ El menú se debe mostrar y ocultar utilizando efectos y debes controlar
 la acumulación de efectos en la cola.*/
 
 $('nav#menu-principal span').on('click', function(){
-    $('ul#menu').slideToggle();
+    $('ul#menu').stop(true,true).slideToggle();
 });
 
 /*Funcion para cerrar el menu si hay un resize()*/
 $(window).on('resize',function() {
-    $("ul#menu").slideUp(); 
+    $("ul#menu").stop(true,true).slideUp(); 
 });
 
 /*Cada opción del submenú se muestra con un efecto y al mostrar una se ocultan 
