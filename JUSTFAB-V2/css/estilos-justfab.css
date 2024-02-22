@@ -29,25 +29,24 @@ div#oscuro {
     background-color: rgba(0, 0, 0, .8);
     display: none;
 }
-
-a > span.compra {
+/*
+a > span.comprar {
     position: absolute;
     bottom: 0;
     z-index: 20;
-    background-color: #222222;
+    background-color: rgba(0, 0, 0, .8);
     color: white;
     border: 0;
-    padding: 1rem 0;
-    width: 100%;
+    height:auto;
     display: none;
     cursor: pointer;
     transition: background-color .3s linear;
-}
-
+}*/
+/*
 a > span.compra:hover {
     background-color: black;
     color: white;
-}
+}*/
 
 /*Estilo para todos los enlaces de la web*/
 a {
@@ -223,13 +222,17 @@ header#top > p#promo > a {
     color: gold;
     font-weight: bold;
 }
-
+/*He tenido que retocar el main añadiendo un div para 
+separar un bloque de  otro*/
 main {
-    display: flex;
-    flex-flow: row wrap;
+    display:flex;
+    flex-direction: column;
 }
-
-main > article.item {
+#bloque-uno{
+    display:flex;
+    flex-flow:row wrap;
+}
+#bloque-uno > article.item {
     flex: 0 1 50%;
 
     display: flex;
@@ -237,30 +240,30 @@ main > article.item {
     padding: 0.8rem;
 }
 
-main > article.item > a:first-child {
+#bloque-uno > article.item > a:first-child {
     order: 2;
 }
 
-main > article.item > a:first-child > h3 {
+#bloque-uno > article.item > a:first-child > h3 {
     margin: 0;
     font-family: 'Open Sans Condensed', sans-serif;
     padding-left: 1rem;
 }
 
-main > article.item > a {
+#bloque-uno > article.item > a {
     position: relative;
 }
 
-main > article.item > a:last-child {
+#bloque-uno > article.item > a:last-child {
     order: 1;
 }
 
-main > article.item > a:last-child > picture > img {
+#bloque-uno > article.item > a:last-child > picture > img {
     width: 100%;
     height: auto;
 }
 
-main > article.item > p {
+#bloque-uno > article.item > p {
     order: 3;
     margin: 0;
     font-family: 'Nunito', sans-serif;
@@ -269,13 +272,16 @@ main > article.item > p {
 
 /*Boton comprar*/
 span.comprar{
-    border:1px solid black;
     padding:1rem;
     border-radius: 100px;
     position:absolute;
-    top:9rem;
-    right:6rem;
+    top:50%;
+    left:50%;
     display:none;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    color:white;
+    background-color:rgb(0, 0, 0,0.7);
 }
 
 footer {
@@ -358,4 +364,10 @@ div#volverarriba > a {
     justify-content: space-between;
     border: 1px solid grey;
     padding: 0.2rem 1rem;
+}
+/*CSS para mi div con el slider*/
+.banner{
+    width: 400px;
+    margin:auto;
+    text-align: center;
 }

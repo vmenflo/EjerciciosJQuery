@@ -12,11 +12,19 @@ $(document).ready(function(){
 
     /*Controlar que cuando se ponga sobre una imagen aparezca el botón comprar*/
     $('.item picture').on('mouseenter', function(){
-        $(this).next('span').delay(300).fadeIn('slow');
-    })
-    $('.item picture').on('mouseleave', function(){
-        $(this).next('span').fadeOut();
-    })
+        // Uso las funciones callbacks para controlar los procesos en cola
+        $(this).next('span').stop(true, true).delay(300).fadeIn('slow', function() {
+            $(this).delay(1000).fadeOut('slow');
+        });
+    });
 
+    /*Slider*/
+    $("#slider").lightSlider({
+        item:1,
+        auto:true,
+        loop:true,
+        pause:5000,
+
+      }); 
 
 });

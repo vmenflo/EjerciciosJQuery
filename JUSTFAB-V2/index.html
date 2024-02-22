@@ -14,12 +14,18 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/estilos-justfab.css">
+    <link rel="stylesheet" href="css/lightslider.css">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="estilos-justfab.css">
+    
+    <script src="https://code.jquery.com/jquery-1.11.0.js" integrity="sha256-zgND4db0iXaO7v4CLBIYHGoIIudWI5hRMQrPB20j0Qw=" crossorigin="anonymous"></script>
     <script src="jq/jquery-3.3.1.min.js"></script>
     <script src="jq/script.js"></script>
+    <!-- llamo al script --> 
+    <script src="jq/lightslider.js"></script>
     <script src="inc/jquery.mb.CSSAnimate.js"></script>
     <script src="inc/jquery.mb.browser.min.js"></script>
+    
 
 </head>
 
@@ -158,13 +164,13 @@
 
         <!--Contenido principal con los productos -->
         <main>
-
+            <div id="bloque-uno">
             <article class="item">
                 <a href="#">
                     <h3>XARENI ADVOCAT</h3>
                 </a>
                 <p>145€</p>
-                <a href="#">
+                <a id="contenedor"href="#">
                     <picture><img src="img/zapato1.jpg" alt="ZAPATO XARENI ADVOCAT" width="380" height="524"></picture>
                     <span class="comprar">COMPRAR</span>
                 </a>
@@ -259,6 +265,35 @@
                     <span class="comprar">COMPRAR</span>
                 </a>
             </article>
+            </div>
+            <div class="banner">
+                <ul id="slider">
+                    <li><img src="img/zapato1.jpg" alt="">
+                        <a href="#">
+                            <h3>VALS</h3>
+                        </a>
+                        <p> 139€</p>
+                    </li>
+                    <li><img src="img/zapato2.jpg" alt="">
+                        <a href="#">
+                            <h3>XARENI ADVOCAT</h3>
+                        </a>
+                        <p>145€</p>
+                    </li>
+                    <li><img src="img/zapato3.jpg" alt="">
+                        <a href="#">
+                            <h3>COSTA RICA</h3>
+                        </a>
+                        <p>145€</p>
+                    </li>
+                    <li><img src="img/zapato1-1.jpg" alt="">
+                        <a href="#">
+                            <h3>VALS</h3>
+                        </a>
+                        <p> 139€</p>
+                    </li>
+                </ul>
+            </div>
         </main>
         <!--Pie de página -->
         <footer>
@@ -281,6 +316,7 @@
         </footer>
         <div id="volverarriba"><a href="#top">VOLVER ARRIBA <span><i class="fa fa-sort-asc" aria-hidden="true"></i></span></a></div>
     </div>
+   
 </body>
 
 </html>
