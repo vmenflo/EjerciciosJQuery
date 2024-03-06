@@ -245,7 +245,7 @@ $(document).ready(function() {
 
 /* EJERCICIO 6- Conseguir que al pinchar en una foto en miniatura se muestre en el slider*/
 $(document).ready(function() {
-    // Asociar un evento de clic a las imágenes en bolitas-fotos
+    // Cuando pulses en una imagen del div bolitas
     $('.bolitas-fotos img').click(function() {
         // Obtener el índice de la imagen clicada
         var imageIndex = $(this).data('index');
@@ -256,10 +256,10 @@ $(document).ready(function() {
 
     // Función para mostrar el panel correspondiente en el slider principal
     function mostrarPanel(index) {
-        // Ocultar todos los paneles en el slider
+        // Ocultamos todos los paneles
         $('#slider .slider-wrapper > li').hide();
 
-        // Mostrar el panel correspondiente al índice dado
+        // Mostrar solo el correspondiente a la imagen
         $('#slider .slider-wrapper > li').eq(index).fadeIn('slow');
 
         // Actualizar la clase activa en los controles de navegación
@@ -271,7 +271,7 @@ $(document).ready(function() {
     mostrarPanel(0);
 
     // Control de clic para los botones anterior y siguiente
-    $('.anterior').click(function() {
+    $('.anterior').click(function() { //Al pulsar en anterior retrocede el index
         var currentIndex = $('#control-buttons li.active').index();
         var newIndex = (currentIndex === 0) ? $('#control-buttons li').length - 1 : currentIndex - 1;
         mostrarPanel(newIndex);
